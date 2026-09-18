@@ -2,7 +2,7 @@
   "name": "skonga-academy",
   "version": "0.1.0",
   "private": true,
-  "description": "Social network for programming learners in East Africa",
+  "description": "SKONGA Academy - web-first programming school with Code Lab and learning community",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
