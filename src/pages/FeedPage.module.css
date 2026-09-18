@@ -1,4 +1,10 @@
-.page { display: flex; flex-direction: column; height: 100%; }
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  min-height: 0;
+}
 
 .topActions { display: flex; gap: 12px; align-items: center; }
 .iconBtn {
@@ -60,7 +66,6 @@
   white-space: nowrap;
 }
 
-/* Compose modal */
 .overlay {
   position: fixed; inset: 0; z-index: 200;
   background: rgba(0,0,0,0.5);
