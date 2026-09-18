@@ -60,9 +60,12 @@ export default function HomePage() {
           )
         })}
 
-        <p className="section-label">Community</p>
+        <p className="section-label">Community · Connect</p>
+        <p className={styles.communityHint}>
+          Maswali, bugs, na progress — kama social feed, lakini inahusiana na masomo.
+        </p>
         {posts.slice(0, 2).map((p) => (
-          <div key={p.id} className="card" style={{ marginBottom: 10 }}>
+          <div key={p.id} className={`card ${styles.communityCard}`}>
             <small>{p.type} · {p.user.name}</small>
             <p>{p.content}</p>
           </div>
