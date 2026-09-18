@@ -6,9 +6,9 @@ import styles from './BottomNav.module.css'
 
 const NAV_ITEMS = [
   { path: '/', key: 'Home', icon: 'home' },
-  { path: '/learn', key: 'Learn', icon: 'compass' },
-  { path: '/lab', key: 'Lab', icon: 'trophy' },
-  { path: '/community', key: 'Community', icon: 'bell' },
+  { path: '/learn', key: 'Learn', icon: 'book' },
+  { path: '/lab', key: 'Lab', icon: 'code' },
+  { path: '/community', key: 'Community', icon: 'users' },
   { path: '/profile', key: 'Profile', icon: 'user-circle' },
 ]
 
