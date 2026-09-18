@@ -1,0 +1,56 @@
+.page { display: flex; flex-direction: column; height: 100%; }
+
+.searchWrap {
+  padding: 10px 12px;
+  background: var(--bg-card);
+  border-bottom: 0.5px solid var(--border);
+}
+.searchBox {
+  background: var(--bg-muted);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; gap: 8px;
+  padding: 9px 12px;
+  color: var(--text-faint);
+}
+.searchBox input {
+  flex: 1; border: none; outline: none;
+  background: none; font-family: inherit;
+  font-size: 14px; color: var(--text-primary);
+}
+.searchBox input::placeholder { color: var(--text-faint); }
+
+.tabs {
+  display: flex;
+  background: var(--bg-card);
+  border-bottom: 0.5px solid var(--border);
+  padding: 0 12px;
+}
+.tab {
+  flex: 1; padding: 10px 0;
+  font-size: 13px; font-weight: 500;
+  color: var(--text-faint);
+  border-bottom: 2px solid transparent;
+}
+.tabActive { color: var(--brand-teal); border-bottom-color: var(--brand-teal); }
+
+.buddyCard { margin: 8px 12px; }
+.buddyTop { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.buddyInfo { flex: 1; }
+.buddyName { font-size: 14px; font-weight: 600; }
+.buddyLevel { font-size: 11px; color: var(--text-faint); margin-top: 2px; }
+.connectBtn { font-size: 12px; padding: 7px 14px; white-space: nowrap; }
+.buddyTags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.buddyFooter { display: flex; justify-content: space-between; align-items: center; }
+.buddyStreak { font-size: 12px; color: var(--text-muted); }
+.buddyCity { font-size: 11px; color: var(--text-faint); }
+
+.projCard { margin: 8px 12px; }
+.projTop { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+.projName { font-size: 14px; font-weight: 600; }
+.projAuthor { font-size: 11px; color: var(--text-faint); margin-top: 2px; }
+.projEmoji { font-size: 24px; }
+.projDesc { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-bottom: 10px; }
+.projFooter { display: flex; justify-content: space-between; align-items: center; }
+.projTech { display: flex; gap: 5px; flex-wrap: wrap; }
+.projStats { display: flex; gap: 10px; font-size: 12px; color: var(--text-faint); }
+.projStats span { display: flex; align-items: center; gap: 4px; }

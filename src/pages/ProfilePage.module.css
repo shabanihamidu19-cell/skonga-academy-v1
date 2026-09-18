@@ -1,0 +1,111 @@
+.page { display: flex; flex-direction: column; height: 100%; }
+
+.darkHeader {
+  background: var(--brand-dark);
+  padding: 16px 16px 0;
+  flex-shrink: 0;
+}
+.profileTop { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.profileInfo { flex: 1; }
+.profileName { font-size: 17px; font-weight: 700; color: #fff; letter-spacing: -0.3px; }
+.profileRole { font-size: 12px; color: #9CA3AF; margin: 3px 0; }
+.profileLoc { font-size: 11px; color: #6B7280; }
+.editBtn {
+  background: rgba(255,255,255,0.1);
+  border: 0.5px solid rgba(255,255,255,0.2);
+  color: #fff; font-size: 12px; padding: 7px 14px;
+  border-radius: var(--radius-sm);
+}
+
+.streakBar {
+  display: flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.07);
+  border-radius: var(--radius-md);
+  padding: 11px 14px;
+  margin-bottom: 14px;
+}
+.fireEmoji { font-size: 22px; flex-shrink: 0; }
+.streakInfo { display: flex; align-items: baseline; gap: 4px; flex-shrink: 0; }
+.streakNum { font-size: 20px; font-weight: 700; color: var(--brand-teal); }
+.streakLabel { font-size: 11px; color: #6B7280; }
+.streakTrack { flex: 1; }
+.streakGoal { font-size: 10px; color: #6B7280; margin-bottom: 5px; text-align: right; }
+.streakRail { height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden; }
+.streakFill { height: 100%; background: var(--brand-teal); border-radius: 2px; transition: width 0.5s ease; }
+
+.statsRow {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  background: var(--border);
+  gap: 0.5px;
+  flex-shrink: 0;
+}
+.statBox { background: var(--bg-card); padding: 12px 8px; text-align: center; }
+.statNum { font-size: 20px; font-weight: 700; color: var(--text-primary); }
+.statLabel { font-size: 10px; color: var(--text-faint); margin-top: 2px; }
+
+.techRow {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 7px;
+  padding: 12px 16px;
+  background: var(--bg-card);
+  border-bottom: 0.5px solid var(--border);
+  flex-shrink: 0;
+}
+.techLabel { font-size: 11px; color: var(--text-faint); }
+.activeTech { border: 1px solid var(--brand-teal-border); }
+.addTech {
+  font-size: 11px; font-weight: 500;
+  color: var(--text-muted);
+  background: var(--bg-muted);
+  padding: 4px 10px; border-radius: var(--radius-full);
+}
+
+.tabs {
+  display: flex; flex-shrink: 0;
+  background: var(--bg-card);
+  border-bottom: 0.5px solid var(--border);
+}
+.tab {
+  flex: 1; padding: 10px 0;
+  font-size: 13px; font-weight: 500;
+  color: var(--text-faint);
+  border-bottom: 2px solid transparent;
+}
+.tabActive { color: var(--brand-teal); border-bottom-color: var(--brand-teal); }
+
+/* Journey */
+.journeyItem {
+  background: var(--bg-card);
+  margin: 4px 12px;
+  border-radius: var(--radius-md);
+  padding: 11px 14px;
+  display: flex; align-items: center; gap: 10px;
+  border: 0.5px solid var(--border);
+}
+.journeyCurrent {
+  border-color: var(--brand-teal);
+  background: #F0FDF7;
+}
+.jDot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.jDot_done { background: var(--brand-teal); }
+.jDot_current { background: var(--brand-teal-mid); box-shadow: 0 0 0 3px rgba(29,158,117,0.2); }
+.jDot_upcoming { background: var(--border); }
+.jText { flex: 1; font-size: 13px; color: var(--text-secondary); }
+.jMeta { font-size: 11px; color: var(--text-faint); }
+.jMetaCurrent { color: var(--brand-teal); font-weight: 600; }
+
+/* Projects */
+.projCard { margin: 8px 12px; }
+.projTop { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+.projName { font-size: 14px; font-weight: 600; }
+.projAge { font-size: 11px; color: var(--text-faint); margin-top: 2px; }
+.projFooter { display: flex; justify-content: space-between; align-items: center; }
+
+/* Badges */
+.badgesGrid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 8px; padding: 0 12px;
+}
+.badgeCard { text-align: center; padding: 16px 10px; }
+.badgeEmoji { font-size: 30px; margin-bottom: 8px; }
+.badgeName { font-size: 12px; font-weight: 600; color: var(--text-primary); }
+.badgeDesc { font-size: 10px; color: var(--text-faint); margin-top: 3px; }

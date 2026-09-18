@@ -1,0 +1,15 @@
+.page { display: flex; flex-direction: column; height: 100%; min-height: 100dvh; }
+.bar { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-bottom: 1px solid #222; }
+.spacer { flex: 1; }
+.tabs { display: flex; gap: 4px; padding: 8px 12px; }
+.tabs button { background: #1a1d27; color: #ccc; border: 0; padding: 6px 12px; border-radius: 8px; }
+.tabs .on { background: #7c3aed; color: #fff; }
+.split { display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; flex: 1; min-height: 320px; }
+@media (min-width: 900px) {
+  .split { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; }
+}
+.editor { width: 100%; height: 100%; min-height: 180px; background: #0b0d12; color: #e5e7eb; border: 0; padding: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; resize: none; }
+.preview { width: 100%; height: 100%; min-height: 180px; border: 0; background: #fff; }
+.console { max-height: 120px; overflow: auto; background: #111; color: #9ca3af; font-size: 12px; padding: 8px 12px; }
+.err { color: #fca5a5; }
+.done { padding: 8px 12px 80px; }

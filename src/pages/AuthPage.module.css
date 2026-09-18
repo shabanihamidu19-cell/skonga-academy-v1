@@ -1,0 +1,115 @@
+.page {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: var(--bg-page);
+}
+
+.card {
+  width: 100%;
+  max-width: 360px;
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: 0.5px solid var(--border);
+  padding: 28px 22px;
+  box-shadow: var(--shadow-card);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--brand-dark);
+  letter-spacing: -0.5px;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.logo span {
+  color: var(--brand-teal);
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-family: inherit;
+  background: var(--bg-muted);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.input:focus {
+  border-color: var(--brand-teal);
+  background: #fff;
+}
+
+.submit {
+  width: 100%;
+  padding: 13px;
+  background: var(--brand-teal);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.15s;
+}
+
+.submit:hover {
+  background: var(--brand-teal-dark);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.switch {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: var(--brand-teal);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+
+.error {
+  background: var(--coral-bg);
+  color: var(--coral-text);
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+}
+
+.success {
+  background: var(--brand-teal-light);
+  color: var(--brand-teal-dark);
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+}

@@ -1,0 +1,14 @@
+.page { min-height: 100%; }
+.article { padding: 8px 16px 24px; }
+.sec { margin-bottom: 22px; }
+.sec h3 { font-size: 14px; display: flex; gap: 8px; align-items: baseline; }
+.sec h3 span { color: #a78bfa; font-variant-numeric: tabular-nums; }
+.pre { background: #0b0d12; color: #e5e7eb; padding: 12px; border-radius: 10px; overflow: auto; font-size: 12px; }
+.q { margin-bottom: 14px; }
+.q label { display: block; margin: 4px 0; }
+.actions { display: grid; gap: 8px; padding: 0 16px 8px; }
+
+.parsonsList { list-style: decimal; padding-left: 1.25rem; }
+.parsonsItem { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 8px 0; flex-wrap: wrap; }
+.parsonsBtns { display: flex; gap: 4px; }
+.parsonsBtns button { padding: 4px 10px; min-width: 36px; }

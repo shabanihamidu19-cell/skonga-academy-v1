@@ -1,0 +1,129 @@
+.page { display: flex; flex-direction: column; height: 100%; }
+
+.topActions { display: flex; gap: 12px; align-items: center; }
+.iconBtn {
+  background: none; border: none; cursor: pointer;
+  position: relative; color: var(--text-muted);
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-sm);
+}
+.iconBtn:hover { background: var(--bg-muted); }
+.notifDot {
+  position: absolute; top: 6px; right: 6px;
+  width: 8px; height: 8px;
+  background: #D85A30; border-radius: 50%;
+  border: 1.5px solid #fff;
+}
+
+.composeBar {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  margin: 10px 12px;
+  padding: 11px 14px;
+  display: flex; align-items: center; gap: 10px;
+  border: 0.5px solid var(--border);
+  cursor: pointer;
+}
+.composePlaceholder { flex: 1; font-size: 14px; color: var(--text-faint); }
+.composeIcons { display: flex; gap: 4px; }
+.composeIcon {
+  width: 30px; height: 30px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg-muted);
+}
+
+.challengeBanner {
+  margin: 0 12px 2px;
+  background: var(--brand-dark);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  display: flex; align-items: center; gap: 12px;
+  cursor: pointer;
+}
+.challengeIcon {
+  width: 42px; height: 42px;
+  background: var(--brand-teal);
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.challengeText { flex: 1; }
+.challengeName { font-size: 13px; font-weight: 600; color: #fff; }
+.challengeSub { font-size: 11px; color: #9CA3AF; margin-top: 2px; }
+.challengeBtn {
+  background: var(--brand-teal);
+  color: #fff; font-size: 11px; font-weight: 600;
+  padding: 7px 14px; border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+/* Compose modal */
+.overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.5);
+  display: flex; flex-direction: column;
+  justify-content: flex-end;
+}
+.modal {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  max-height: 85vh;
+  display: flex; flex-direction: column;
+  padding-bottom: var(--safe-bottom);
+}
+.modalHeader {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 0.5px solid var(--border);
+}
+.modalTitle { font-size: 15px; font-weight: 600; }
+.cancelBtn { font-size: 14px; color: var(--text-muted); padding: 4px; }
+.postBtn { font-size: 13px; padding: 7px 18px; border-radius: var(--radius-sm); }
+.postBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.typeRow {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  padding: 12px 16px;
+  border-bottom: 0.5px solid var(--border);
+}
+.typeBtn {
+  font-size: 12px; font-weight: 500;
+  padding: 5px 11px; border-radius: var(--radius-full);
+  background: var(--bg-muted); color: var(--text-muted);
+  white-space: nowrap;
+}
+.typeBtnActive {
+  background: var(--brand-teal-light);
+  color: var(--brand-teal-dark);
+}
+
+.modalBody { flex: 1; overflow-y: auto; padding: 14px 16px; }
+.composeRow { display: flex; gap: 10px; }
+.textarea {
+  flex: 1; border: none; outline: none;
+  font-family: inherit; font-size: 15px;
+  color: var(--text-primary);
+  resize: none; background: none;
+  line-height: 1.6;
+}
+.codeInput {
+  width: 100%; border: 0.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: 'Courier New', monospace; font-size: 13px;
+  color: var(--brand-teal-dark); background: var(--bg-muted);
+  padding: 10px 12px; margin-top: 10px;
+  resize: none; outline: none;
+  border-left: 3px solid var(--brand-teal);
+}
+.modalActions {
+  padding: 10px 16px;
+  border-top: 0.5px solid var(--border);
+}
+.addCodeBtn {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--brand-teal);
+  font-weight: 500;
+}

@@ -1,0 +1,286 @@
+/* ===== DEVPATH GLOBAL STYLES ===== */
+
+:root {
+  --brand-dark: #0F1117;
+  --brand-teal: #1D9E75;
+  --brand-teal-light: #E1F5EE;
+  --brand-teal-mid: #5DCAA5;
+  --brand-teal-border: #9FE1CB;
+  --brand-teal-dark: #0F6E56;
+
+  --purple-bg: #EEEDFE;
+  --purple-text: #3C3489;
+  --coral-bg: #FAECE7;
+  --coral-text: #993C1D;
+  --amber-bg: #FAEEDA;
+  --amber-text: #854F0B;
+  --blue-bg: #E6F1FB;
+  --blue-text: #185FA5;
+  --green-bg: #EAF3DE;
+  --green-text: #3B6D11;
+
+  --bg-page: #F5F6FA;
+  --bg-card: #ffffff;
+  --bg-muted: #F3F4F6;
+
+  --text-primary: #0F1117;
+  --text-secondary: #374151;
+  --text-muted: #6B7280;
+  --text-faint: #9CA3AF;
+
+  --border: #E5E7EB;
+  --border-light: #F3F4F6;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+
+  --nav-height: 64px;
+  --topbar-height: 52px;
+
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--bg-page);
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-page);
+}
+
+/* Safe areas for notch phones */
+.safe-top { padding-top: var(--safe-top); }
+.safe-bottom { padding-bottom: var(--safe-bottom); }
+
+/* Scrollable content area */
+.scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+}
+.scroll-area::-webkit-scrollbar { display: none; }
+
+/* ===== TYPOGRAPHY ===== */
+h1 { font-size: 20px; font-weight: 700; }
+h2 { font-size: 17px; font-weight: 600; }
+h3 { font-size: 15px; font-weight: 600; }
+
+/* ===== BUTTONS ===== */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+}
+
+button:active { opacity: 0.75; transform: scale(0.97); }
+
+.btn-primary {
+  background: var(--brand-teal);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s;
+}
+.btn-primary:hover { background: var(--brand-teal-dark); }
+
+.btn-dark {
+  background: var(--brand-dark);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+}
+
+.btn-ghost {
+  background: var(--bg-muted);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+}
+
+.btn-full {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: var(--radius-md);
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 0.5px solid var(--border);
+  padding: 14px;
+}
+
+/* ===== AVATAR ===== */
+.avatar {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.avatar-sm { width: 32px; height: 32px; font-size: 12px; }
+.avatar-md { width: 40px; height: 40px; font-size: 14px; }
+.avatar-lg { width: 56px; height: 56px; font-size: 18px; }
+.avatar-xl { width: 72px; height: 72px; font-size: 22px; }
+
+.av-teal { background: var(--brand-teal-light); color: var(--brand-teal-dark); }
+.av-purple { background: var(--purple-bg); color: var(--purple-text); }
+.av-coral { background: var(--coral-bg); color: var(--coral-text); }
+.av-dark { background: var(--brand-dark); color: #fff; }
+
+/* ===== TAGS / BADGES ===== */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+}
+.tag-learn { background: var(--brand-teal-light); color: var(--brand-teal-dark); }
+.tag-bug { background: var(--coral-bg); color: var(--coral-text); }
+.tag-project { background: var(--purple-bg); color: var(--purple-text); }
+.tag-question { background: var(--amber-bg); color: var(--amber-text); }
+.tag-challenge { background: var(--blue-bg); color: var(--blue-text); }
+.tag-resource { background: var(--green-bg); color: var(--green-text); }
+.tag-progress { background: var(--amber-bg); color: var(--amber-text); }
+
+.tech-badge {
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+}
+.tb-js { background: var(--amber-bg); color: var(--amber-text); }
+.tb-react { background: var(--blue-bg); color: var(--blue-text); }
+.tb-python { background: var(--green-bg); color: var(--green-text); }
+.tb-html { background: var(--coral-bg); color: var(--coral-text); }
+.tb-css { background: var(--purple-bg); color: var(--purple-text); }
+.tb-node { background: var(--brand-teal-light); color: var(--brand-teal-dark); }
+
+/* ===== DIVIDER ===== */
+.divider {
+  height: 0.5px;
+  background: var(--border);
+  margin: 0;
+}
+
+/* ===== TOP BAR ===== */
+.top-bar {
+  background: var(--bg-card);
+  height: var(--topbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 0.5px solid var(--border);
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.top-bar-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.logo {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--brand-dark);
+  letter-spacing: -0.5px;
+}
+.logo span { color: var(--brand-teal); }
+
+/* ===== STREAK PILL ===== */
+.streak-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #FFF7ED;
+  border: 0.5px solid #FAC775;
+  border-radius: var(--radius-full);
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--amber-text);
+}
+
+/* ===== SECTION TITLE ===== */
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 12px 16px 6px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fadeUp 0.2s ease both;
+}
+
+/* ===== BOTTOM NAV SPACER ===== */
+.bottom-spacer {
+  height: calc(var(--nav-height) + var(--safe-bottom) + 8px);
+  flex-shrink: 0;
+}

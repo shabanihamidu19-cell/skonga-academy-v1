@@ -1,0 +1,22 @@
+{
+  "appId": "tz.devpath.app",
+  "appName": "DevPath",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#0F1117"
+    },
+    "Keyboard": {
+      "resize": "body",
+      "style": "DARK"
+    }
+  },
+  "android": {
+    "allowMixedContent": false,
+    "backgroundColor": "#0F1117"
+  }
+}

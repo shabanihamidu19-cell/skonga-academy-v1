@@ -1,0 +1,88 @@
+.nav {
+  background: #ffffff;
+  border-top: 0.5px solid var(--border);
+  display: flex;
+  padding: 6px 0 calc(6px + var(--safe-bottom));
+  flex-shrink: 0;
+  position: relative;
+  z-index: 100;
+}
+
+.navItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 0;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.1s;
+}
+
+.navItem:active {
+  opacity: 0.6;
+  transform: scale(0.93);
+}
+
+.iconWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  color: var(--text-faint);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.active .icon {
+  color: var(--brand-teal);
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-faint);
+}
+
+.active .label {
+  color: var(--brand-teal);
+}
+
+.dot {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--brand-teal);
+  border-radius: 50%;
+}
+
+.badge {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  min-width: 16px;
+  height: 16px;
+  background: #D85A30;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}

@@ -1,0 +1,9 @@
+.page { min-height: 100%; }
+.hello { font-size: 22px; font-weight: 700; margin: 8px 16px 4px; }
+.sub { color: var(--text-muted); margin: 0 16px 16px; }
+.continue { margin: 0 16px 16px; cursor: pointer; }
+.continue h2 { margin: 8px 0 4px; font-size: 18px; }
+.bar { height: 6px; background: #222; border-radius: 99px; overflow: hidden; margin: 10px 0 6px; }
+.bar span { display: block; height: 100%; background: #a78bfa; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 16px 12px; }
+.path { width: calc(100% - 32px); margin: 0 16px 8px; display: flex; justify-content: space-between; text-align: left; }
